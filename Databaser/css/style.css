@@ -1,5 +1,5 @@
 body {
-  display: block;
+    display: block;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -30,11 +30,86 @@ body {
     display: block;
   }
 
-  .block1,
-  .block2{
+  .block{
     display: inline-block;
+    padding: 2vw;
   }
 
-  .block2{
-    margin-left: 10%;
+
+
+  #personcollect {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #personcollect td, #personcollect th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #personcollect tr:nth-child(even){background-color: #f2f2f2;}
+  #personcollect tr:hover {background-color: #ddd;}
+  #personcollect th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  #eiendomcollect {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #eiendomcollect td, #eiendomcollect th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #eiendomcollect tr:nth-child(even){background-color: #f2f2f2;}
+  #eiendomcollect tr:hover {background-color: #ddd;}
+  #eiendomcollect th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  #kjøretøycollect {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #kjøretøycollect td, #kjøretøycollect th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #kjøretøycollect tr:nth-child(even){background-color: #f2f2f2;}
+  #kjøretøycollect tr:hover {background-color: #ddd;}
+  #kjøretøycollect th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  
+  #ektefellecollect {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  #ektefellecollect td, #ektefellecollect th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #ektefellecollect tr:nth-child(even){background-color: #f2f2f2;}
+  #ektefellecollect tr:hover {background-color: #ddd;}
+  #ektefellecollect th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
   }

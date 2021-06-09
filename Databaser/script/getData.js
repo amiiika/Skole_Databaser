@@ -27,15 +27,16 @@
   const ektefelleCOLLECTION = 'Personregister';
 
 
+
   // getting data (person)
   DB.collection(personCOLLECTION).onSnapshot(snapshot =>{
     const collectionArr = snapshot.docs;
     if(collectionArr.length > 0){
-        personLISTVIEW.innerHTML = '';
+      //  personLISTVIEW.innerHTML = '';
         collectionArr.forEach(arrelement => {
           element = arrelement.data();
           personLISTVIEW.innerHTML += `
-          <li> <span class="person"> ${element.Fornavn} ${element.Etternavn}</span></li>
+          <tr> <span class="person"> <td> ${element.Fornavn}</td> <td>${element.Etternavn}</td><td> ${element.Fødselsdato}</td><td> ${element.Postadresse}</td></span></tr>
           `
         });
     }
@@ -45,11 +46,11 @@
     DB.collection(EiendomCOLLECTION).onSnapshot(snapshot =>{
       const collectionArr = snapshot.docs;
       if(collectionArr.length > 0){
-          eiendomLISTVIEW.innerHTML = '';
+         // eiendomLISTVIEW.innerHTML = '';
           collectionArr.forEach(arrelement => {
             element = arrelement.data();
             eiendomLISTVIEW.innerHTML += `
-            <li> <span class="eiendom"> ${element.Adresse} :${element.Eiendomsnummer}</span></li>
+            <tr> <span class="eiendom"> <td> ${element.Adresse}</td> <td>${element.Eiendomsnummer}</td> <td>${element.Kommune}</td> <td>${element.Postnummer}</td></span></tr>
             `
           });
       }
@@ -60,26 +61,26 @@
 DB.collection(KjøretøyCOLLECTION).onSnapshot(snapshot =>{
   const collectionArr = snapshot.docs;
   if(collectionArr.length > 0){
-      kjøretøyLISTVIEW.innerHTML = '';
+     // kjøretøyLISTVIEW.innerHTML = '';
       collectionArr.forEach(arrelement => {
         element = arrelement.data();
         kjøretøyLISTVIEW.innerHTML += `
-        <li> <span class="person"> ${element.Kjøretøytype} ${element.Chassinummer} ${element.Eier}</span></li>
+        <tr> <span class="person"> <td> ${element.Eier}</td> <td>${element.Kjøretøytype}</td> <td> ${element.Chassinummer}</td> </span></tr>
         `
       });
   }
 });
 
-// getting data (ektefelle)
-DB.collection(ektefelleCOLLECTION).onSnapshot(snapshot =>{
+ // getting data (ektefelle)
+ DB.collection(ektefelleCOLLECTION).onSnapshot(snapshot =>{
   const collectionArr = snapshot.docs;
   if(collectionArr.length > 0){
-      ektefelleLISTVIEW.innerHTML = '';
       collectionArr.forEach(arrelement => {
         element = arrelement.data();
         ektefelleLISTVIEW.innerHTML += `
-        <li> <span class="person"> ${element.Ektefelle} : ${element.Personnummer}</span></li>
+        <tr> <span class="ektefelle"> <td> ${element.Fornavn} ${element.Etternavn} </td> <td> ${element.Personnummer}</td> <td>${element.Ektefelle}</td> </span></tr>
         `
       });
   }
 });
+

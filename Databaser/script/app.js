@@ -32,7 +32,7 @@ const KjøretøyCOLLECTION = 'Kjøretøyregister';
     let Fornavn = document.getElementById("fornavn").value
     let Etternavn = document.getElementById("etternavn").value
     let Fødselsdato = document.getElementById("fødselsdato").value
-    let Personnummer= document.getElementById("perosnnummer").value
+    let Personnummer= document.getElementById("personnummer").value
     let Postadresse = document.getElementById("postadresse").value
     let Ektefelle = document.getElementById("ektefelle").value
     DB.collection(personCOLLECTION).add({
@@ -43,6 +43,12 @@ const KjøretøyCOLLECTION = 'Kjøretøyregister';
        Postadresse,
        Ektefelle,
     });
+    document.getElementById("fornavn").value = "";
+    document.getElementById("etternavn").value = "";
+    document.getElementById("fødselsdato").value = "";
+    document.getElementById("personnummer").value = "";
+    document.getElementById("postadresse").value = "";
+    document.getElementById("ektefelle").value = "";
   });
   
   // saving data(eiendom)
@@ -62,6 +68,12 @@ const KjøretøyCOLLECTION = 'Kjøretøyregister';
        Postnummer,
        Poststed,
     });
+    document.getElementById("adresse").value = "";
+    document.getElementById("eiendomsnummer").value = "";
+    document.getElementById("areal").value = "";
+    document.getElementById("kommune").value = "";
+    document.getElementById("postnummer").value = "";
+    document.getElementById("poststed").value = "";
   });
   
 
@@ -84,4 +96,11 @@ kjøretøyForm.addEventListener('submit', (e) => {
      Drivstoff,
      Registreringsaar,
   });
+  document.getElementById("eier").value = "";
+  document.getElementById("kjøretøytype").value = "";
+  document.getElementById("vekt").value = "";
+  document.getElementById("chassinummer").value = "";
+  document.getElementById("antallseter").value = "";
+  document.getElementById("drivstoff").value = "";
+  document.getElementById("registreringsaar").value = "";
 });
